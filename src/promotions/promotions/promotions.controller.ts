@@ -8,7 +8,7 @@ export class PromotionsController {
             {
                 "promotion_id" : 1,
                 "banner_urls" : [
-                    "https://catlitter.lk/wp-content/uploads/2023/04/Post-Pc.jpg"
+                    "https://catlitter.lk/wp-content/uploads/2024/02/Drools-Offer-PC.jpg"
                 ]
             }
         ])
