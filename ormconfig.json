@@ -1,12 +1,11 @@
 {
     "type": "postgres",
-    "host": "localhost",
-    "port": 5431,
-    "username": "admin",
-    "password": "admi",
+    "host": "ec2-13-234-20-8.ap-south-1.compute.amazonaws.com",
+    "port": 5432,
+    "username": "pguser",
+    "password": "pgpw",
     "database": "promo_db",
     "entities": ["dist/**/*.entity{.ts,.js}"],
     "synchronize": true,
     "logging": true
   }
-  
