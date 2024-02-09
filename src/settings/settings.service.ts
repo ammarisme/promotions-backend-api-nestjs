@@ -28,18 +28,13 @@ export class SettingsService {
   }
 
   async update(id: number, updateDeviceDto: UpdateSettingDto) {
-    console.log(id);
+    console.log(updateDeviceDto);
     const existingObj = await this.findOne(id);
 
     // Update the fields if they exist in the updateDeviceDto
 
-    if (updateDeviceDto.expired) {
-      existingObj.expired = updateDeviceDto.expired;
-    }
-
-    if (updateDeviceDto.expired) {
-      existingObj.otpenabled = updateDeviceDto.otpenabled;
-    }
+    existingObj.expired = updateDeviceDto.expired;
+    existingObj.otpenabled = updateDeviceDto.otpenabled;
 
     return this.repo.save(existingObj);
   }
