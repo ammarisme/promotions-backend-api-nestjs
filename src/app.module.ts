@@ -8,6 +8,10 @@ import { PromotionsModule } from './promotions/promotions.module';
 import { Promotion } from './promotions/entities/promotion.entity';
 import { SettingsModule } from './settings/settings.module';
 import { Setting } from './settings/entities/setting.entity';
+import { CustomerModule } from './customer/customer.module';
+import { Customer } from './customer/entities/customer.entity';
+import { UserModule } from './user/user.module';
+import { User } from './user/entities/user.entity';
 
 @Module({
   imports: [PromotionsModule,
@@ -17,13 +21,15 @@ import { Setting } from './settings/entities/setting.entity';
       port: 5432,
       password: 'pgpw',
       username: 'pguser',
-      entities: [Device,Promotion, Setting],
+      entities: [Device,Promotion, Setting, Customer, User],
       database: 'promo_db',
       synchronize: true,
       logging: true,
     }),
     DevicesModule,
     SettingsModule,
+    CustomerModule,
+    UserModule
   ],
   controllers: [AppController],
   providers: [AppService],
